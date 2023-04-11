@@ -1,11 +1,11 @@
 // https://umijs.org/config/
 import { defineConfig } from '@umijs/max';
-import { join } from 'path';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
-const { REACT_APP_ENV = 'dev' } = process.env;
+const { REACT_APP_ENV = 'pre' } = process.env;
 export default defineConfig({
+  // publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   /**
    * @name 开启 hash 模式
    * @description 让 build 之后的产物包含 hash 后缀。通常用于增量发布和避免浏览器加载缓存。
